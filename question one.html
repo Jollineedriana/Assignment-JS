@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<html>
+<head>
+ 
+</head>
+<body>
+
+<form name="myForm"  onsubmit="return validateForm()">
+  Name: <input type="text" name="name"required>
+
+  Email:
+  <input type="email" name="email" required >
+
+  Password:<input type="password" name="password" required>
+  <input type="submit" value="Submit">
+  <script>
+    function validateForm() {
+      var email = document.getElementById('email').value;
+      var name = document.getElementById('name').value;
+      var password = document.getElementById('password').value;
+
+      if (email === '' || name === '' || password === '') {
+        alert('Please fill all the values');
+        event.preventDefault(); 
+      }
+    }
+  </script>
+</form>
+
+</body>
+
+</html>
+</body>
+</html>
